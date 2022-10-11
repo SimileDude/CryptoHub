@@ -1,17 +1,57 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import React, { StrictMode } from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+import './App.css'
+import CoinProvider from './ContextAPI/CoinContext'
+import WatchedProvider from './ContextAPI/WatchedContext'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#090C9B'
+    },
+    secondary: {
+      main: '#B4C5E4'
+    },
+    ivory: {
+      main: '#FBFFF1'
+    },
+    darkYellow: {
+      main: '#EFB701',
+      dark: '#efa301'
+    },
+    customGrey: {
+      light: '#EDEDEB',
+      main: '#A6A8AC'
+    }
+  },
+  typography: {
+    allVariants: {
+      fontWeight: '100'
+    }
+  }
+})
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <WatchedProvider>
+    <CoinProvider>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </CoinProvider>
+  </WatchedProvider>
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//coolors.co
+//ivery #FBFFF1
+//light street blue B4C5E4
+//iris #3D52D5
+// duke blue  090C9B
+//black coffee  3C3744
+
+//deep purple #4050C6

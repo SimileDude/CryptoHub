@@ -1,0 +1,12 @@
+.panel {
+    display:flex;
+    flex-grow: 1;
+    height: calc(100vh);
+    min-height: 400px;
+    flex-direction: column;
+    overflow:auto;
+    /* width: 50vw; */
+}
+
+
+

@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  flex-direction: row;
+  /* align-items: left; */
+  /* justify-content:stretch; */
+
+  /* margin-top: 20px; */
+  /* color: #fff; */
+  /* background-color: #cd4444; */
+  padding: 0px;
+  width: 100%;
+}
