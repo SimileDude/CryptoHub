@@ -6,20 +6,24 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
-  /* background-color: #1a1a1c; */
-  /* color: #fff; */
-  
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.coin-app {
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
-  /* justify-content: space-between; */
-  /* margin-top: 20px; */
-  /* color: #fff; */
-  /* background-color: #e2e2e2; */
-  /* padding: 20px; */
   border: 1px solid gray;
   
 }

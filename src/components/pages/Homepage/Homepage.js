@@ -1,12 +1,20 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import CoinDetails from './CoinDetails'
+import CoinDetails from './CoinDetails/CoinDetails'
 import CoinsPanel from './CoinsPanel/CoinsPanel'
-import './Homepage.css'
 
 function Homepage() {
   return (
-    <Grid container spacing={2} className="home" sx={{ backgroundColor: '#F7F7F7' }}>
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        backgroundColor: '#F7F7F7',
+        display: 'flex',
+        flexDirection: 'row',
+        padding: 0,
+        width: '100%'
+      }}>
       <Grid item xs={12} sm={12} md={5} lg={5} xl={4}>
         <CoinsPanel />
       </Grid>
