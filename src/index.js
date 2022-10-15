@@ -1,9 +1,8 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import React, { StrictMode } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
-import './App.css'
 import CoinProvider from './ContextAPI/CoinContext'
 import WatchedProvider from './ContextAPI/WatchedContext'
 
@@ -46,12 +45,3 @@ root.render(
     </CoinProvider>
   </WatchedProvider>
 )
-
-//coolors.co
-//ivery #FBFFF1
-//light street blue B4C5E4
-//iris #3D52D5
-// duke blue  090C9B
-//black coffee  3C3744
-
-//deep purple #4050C6

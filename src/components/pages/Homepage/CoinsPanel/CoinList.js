@@ -29,7 +29,7 @@ function CoinList({ search }) {
           <div key={index}>
             <CoinItem
               name={coin.name}
-              key={coin.id}
+              id={coin.id}
               image={coin.image}
               symbol={coin.symbol}
               marketCap={coin.market_cap}

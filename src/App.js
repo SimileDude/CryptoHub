@@ -3,15 +3,15 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout/Layout'
 import Homepage from './components/pages/Homepage/Homepage'
-import Portfolio from './components/pages/Portfolio'
+// import Portfolio from './components/pages/Portfolio'
 
 function App() {
   return (
     <Layout>
-      <div className="coin-app">
+      <div className="app">
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
-          <Route path="portfolio" element={<Portfolio />}></Route>
+          {/* <Route path="portfolio" element={<Portfolio />}></Route> */}
         </Routes>
       </div>
     </Layout>
@@ -19,5 +19,3 @@ function App() {
 }
 
 export default App
-
-//https://www.coingecko.com/en/api/documentation

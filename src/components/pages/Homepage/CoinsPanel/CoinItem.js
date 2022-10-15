@@ -1,5 +1,5 @@
 import { Box, Card, CardMedia, Checkbox, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React from 'react'
 
 import StarIcon from '@mui/icons-material/Star'
 import StarOutlineIcon from '@mui/icons-material/StarOutline'
@@ -9,6 +9,7 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp'
 import { WatchedState } from '../../../../ContextAPI/WatchedContext'
 
 const CoinItem = ({
+  id,
   name,
   image,
   symbol,
@@ -24,45 +25,54 @@ const CoinItem = ({
   const [selectedCoin, setSelectedCoin] = selectedCoinGroup //Using Context API
   const [allCoins] = allCoinsGroup //Using Context API
 
-  const { numWatchedCoinsGroup, filterByWatchedGroup } = WatchedState()
-  const [, setNumWatchedCoins] = numWatchedCoinsGroup
-
-  const [isChecked, setIsChecked] = useState(isWatched)
-
-  const coin = {
-    name,
-    image,
-    symbol,
-    price,
-    volume,
-    priceChange,
-    marketCap,
-    marketCapChange24h,
-    totalSupply,
-    isWatched
-  }
+  const { numWatchedCoinsGroup, filterByWatchedGroup } = WatchedState() //Using Context API
+  const [, setNumWatchedCoins] = numWatchedCoinsGroup //Using Context API
 
   const handleCardClick = (e) => {
-    setSelectedCoin(coin)
+    setSelectedCoin({
+      id,
+      name,
+      image,
+      symbol,
+      price,
+      volume,
+      priceChange,
+      marketCap,
+      marketCapChange24h,
+      totalSupply,
+      isWatched
+    })
   }
 
+  let coin = {}
   const handleWatchedClick = (e) => {
-    for (let coin of allCoins) {
-      if (coin.name === name) {
-        if (coin.isWatched) {
-          //if already being watched, stop watching
-          setIsChecked(false)
-          coin.isWatched = false
-          setNumWatchedCoins((numWatched) => numWatched - 1)
-        } else {
-          //if not being watched, begin watching
-          setIsChecked(true)
-          coin.isWatched = true
-          setNumWatchedCoins((numWatched) => numWatched + 1)
-        }
-        break
-      }
+    coin = allCoins.find((coin) => {
+      return coin.name === name
+    })
+    if (coin.isWatched) {
+      //if already being watched, stop watching
+      coin.isWatched = false
+      setNumWatchedCoins((numWatched) => numWatched - 1)
+    } else {
+      //if not being watched, begin watching
+      coin.isWatched = true
+      setNumWatchedCoins((numWatched) => numWatched + 1)
     }
+
+    // for (let coin of allCoins) {
+    //   if (coin.name === name) {
+    //     if (coin.isWatched) {
+    //       //if already being watched, stop watching
+    //       coin.isWatched = false
+    //       setNumWatchedCoins((numWatched) => numWatched - 1)
+    //     } else {
+    //       //if not being watched, begin watching
+    //       coin.isWatched = true
+    //       setNumWatchedCoins((numWatched) => numWatched + 1)
+    //     }
+    //     break
+    //   }
+    // }
   }
 
   return (
@@ -77,7 +87,7 @@ const CoinItem = ({
         }}>
         <Checkbox
           icon={<StarOutlineIcon />}
-          checked={isChecked}
+          checked={isWatched}
           checkedIcon={<StarIcon />}
           sx={{
             position: 'absolute',
