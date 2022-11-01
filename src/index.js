@@ -25,6 +25,10 @@ const theme = createTheme({
     customGrey: {
       light: '#EDEDEB',
       main: '#A6A8AC'
+    },
+    darkGreen: {
+      light: '#C0CFBC',
+      main: '#A8B6A5'
     }
   },
   typography: {

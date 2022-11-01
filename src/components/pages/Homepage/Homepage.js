@@ -9,11 +9,10 @@ function Homepage() {
       container
       spacing={2}
       sx={{
-        backgroundColor: '#F7F7F7',
         display: 'flex',
         flexDirection: 'row',
         padding: 0,
-        width: '100%'
+        height: 'calc(100vh - 50px)'
       }}>
       <Grid item xs={12} sm={12} md={5} lg={5} xl={4}>
         <CoinsPanel />

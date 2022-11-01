@@ -7,7 +7,7 @@ function CoinList({ search }) {
   const [filterByWatched] = filterByWatchedGroup
 
   const { selectedCoinGroup, allCoinsGroup } = CoinState() //Using Context API
-  const [allCoins] = allCoinsGroup //Using Context API
+  const [allCoins, setAllCoins] = allCoinsGroup //Using Context API
 
   //Function used when user Searches
   const searchFilter = (arr) => {

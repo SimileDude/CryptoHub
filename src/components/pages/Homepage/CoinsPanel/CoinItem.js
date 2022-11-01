@@ -58,21 +58,6 @@ const CoinItem = ({
       coin.isWatched = true
       setNumWatchedCoins((numWatched) => numWatched + 1)
     }
-
-    // for (let coin of allCoins) {
-    //   if (coin.name === name) {
-    //     if (coin.isWatched) {
-    //       //if already being watched, stop watching
-    //       coin.isWatched = false
-    //       setNumWatchedCoins((numWatched) => numWatched - 1)
-    //     } else {
-    //       //if not being watched, begin watching
-    //       coin.isWatched = true
-    //       setNumWatchedCoins((numWatched) => numWatched + 1)
-    //     }
-    //     break
-    //   }
-    // }
   }
 
   return (
