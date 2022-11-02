@@ -7,10 +7,14 @@ import { HistoricalChartData } from '../../../../config/coingeckoAPI'
 import { chartTimeFrames } from '../../../../config/chartTimeFrames'
 import { Box } from '@mui/system'
 import ButtonChartTime from '../../../Layout/ButtonChartTime'
+import { CoinState } from '../../../../ContextAPI/CoinContext'
 
-const Chart = ({ selectedCoin }) => {
+const Chart = () => {
   const [historicalData, setHistoricalData] = useState()
   const [days, setDays] = useState(1)
+
+  const { selectedCoinGroup, allCoinsGroup } = CoinState() //Using Context API
+  const [selectedCoin, setSelectedCoin] = selectedCoinGroup //Using Context API
 
   //use a ref variable to keep from fetching data on first mount
   const isMounted = useRef(false)
@@ -20,13 +24,17 @@ const Chart = ({ selectedCoin }) => {
     setHistoricalData(data.prices)
   }
 
+  const checkForMount = () => {
+    isMounted.current ? getHistoricalData() : (isMounted.current = true)
+  }
+
   useEffect(() => {
-    if (isMounted.current) {
-      getHistoricalData()
-    } else {
-      isMounted.current = true
-    }
-  }, [days, selectedCoin])
+    checkForMount()
+  }, [days])
+
+  useEffect(() => {
+    checkForMount()
+  }, [selectedCoin])
 
   if (historicalData) {
     return (
@@ -58,7 +66,7 @@ const Chart = ({ selectedCoin }) => {
             }
           }}
         />
-        <Box sx={{ mt: '2%', mb: '10%' }}>
+        <Box sx={{ mt: 2 }}>
           {chartTimeFrames.map((timeFrame) => (
             <ButtonChartTime
               key={timeFrame.value}

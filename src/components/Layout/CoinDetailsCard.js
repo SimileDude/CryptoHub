@@ -7,17 +7,17 @@ const CoinDetailsCard = ({ title, mainStat, percChange }) => {
       sx={{
         borderRadius: 3,
         bgcolor: '#E1E7E3',
-        minWidth: 200,
+        minWidth: 150,
+        minHeight: 100,
         maxHeight: 200,
-        // display: { sm: 'none',  md: 'flex' },
         mb: 2
       }}>
       <CardContent>
-        <Typography sx={{ fontSize: 12, fontWeight: 500, mb: 5 }}>{title}</Typography>
+        <Typography sx={{ fontSize: '.75rem', fontWeight: 500, mb: 2 }}>{title}</Typography>
         <Typography sx={{ fontSize: '.9rem', fontWeight: 300, opacity: 0.7 }}>
           {percChange ? percChange : ' '}
         </Typography>
-        <Typography variant="h6" sx={{ fontWeight: 400 }}>
+        <Typography variant="h7" sx={{ fontWeight: 400 }}>
           {mainStat}
         </Typography>
       </CardContent>

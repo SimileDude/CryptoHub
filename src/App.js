@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout/Layout'
 import Homepage from './components/pages/Homepage/Homepage'
-// import Portfolio from './components/pages/Portfolio'
+import About from './components/pages/About/About'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className="app">
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
-          {/* <Route path="portfolio" element={<Portfolio />}></Route> */}
+          <Route path="/about" element={<About />}></Route>
         </Routes>
       </div>
     </Layout>

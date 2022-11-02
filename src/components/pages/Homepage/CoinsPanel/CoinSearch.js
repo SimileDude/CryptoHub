@@ -12,7 +12,7 @@ function CoinSearch({ onSearch }) {
           display: 'flex',
           alignItems: 'center',
           border: 'none',
-          backgroundColor: '#C0CFBC' //'#EFB701'
+          backgroundColor: '#C0CFBC'
         }}>
         <Icon aria-label="search" sx={{ mx: 2, color: 'white' }}>
           <SearchSharpIcon />
