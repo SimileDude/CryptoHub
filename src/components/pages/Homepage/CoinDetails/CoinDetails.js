@@ -124,7 +124,6 @@ const CoinDetails = () => {
               display: 'flex',
               flexDirection: 'column',
               flexFlow: 'row wrap',
-              justifyContent: 'center',
               alignItems: 'flex-start',
               gap: 2,
               mt: 2

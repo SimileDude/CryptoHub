@@ -28,7 +28,7 @@ const theme = createTheme({
     },
     darkGreen: {
       light: '#C0CFBC',
-      main: '#A8B6A5'
+      main: '#45735E'
     }
   },
   typography: {
