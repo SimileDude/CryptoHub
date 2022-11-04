@@ -12,7 +12,8 @@ const CoinDetails = () => {
   if (selectedCoin) {
     return (
       <>
-        <Box sx={{ display: 'flex', width: '100%', flexDirection: 'column' }}>
+        <Box
+          sx={{ display: 'flex', width: '100%', flexDirection: 'column', m: 0, p: 0, mt: '64px' }}>
           <Box component="h1" sx={{ fontWeight: '300', flex: 2, my: 3 }}>
             {selectedCoin?.name}
           </Box>
@@ -104,59 +105,62 @@ const CoinDetails = () => {
               </Box>
             </Box>
           </Box>
-        </Box>
-        <br />
-        <br />
-        <Box
-          sx={{
-            height: 'auto',
-            width: 'auto',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            alignItems: 'start'
-          }}>
-          <Chart />
+
           <br />
           <br />
           <Box
             sx={{
+              height: 'auto',
+              width: 'auto',
               display: 'flex',
               flexDirection: 'column',
-              flexFlow: 'row wrap',
-              alignItems: 'flex-start',
-              gap: 2,
-              mt: 2
+              justifyContent: 'space-between',
+              alignItems: 'start'
             }}>
-            <CoinDetailsCard
-              title="Price"
-              mainStat={`$${Number(selectedCoin.price.toFixed(2)).toLocaleString()}` || 0}
-              percChange={
-                selectedCoin.priceChange ? `${selectedCoin.priceChange?.toFixed(2)}% in 24 hrs` : ''
-              }
-            />
-            <CoinDetailsCard
-              title="Market Cap"
-              mainStat={`$${Number(selectedCoin.marketCap.toFixed(2)).toLocaleString()}` || 0}
-              percChange={
-                selectedCoin.marketCapChange24h ? (
-                  `${selectedCoin.marketCapChange24h?.toFixed(2)}% in 24 hrs`
-                ) : (
-                  <br />
-                )
-              }
-            />
-            <CoinDetailsCard
-              title="Volume (24h)"
-              mainStat={`${selectedCoin.volume.toLocaleString()}` || 0}
-              percChange={<br />}
-            />
+            <Chart />
+            <br />
+            <br />
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                flexFlow: 'row wrap',
+                alignItems: 'flex-start',
+                gap: 2,
+                mt: 2
+              }}>
+              <CoinDetailsCard
+                title="Price"
+                mainStat={`$${Number(selectedCoin.price.toFixed(2)).toLocaleString()}` || 0}
+                percChange={
+                  selectedCoin.priceChange
+                    ? `${selectedCoin.priceChange?.toFixed(2)}% in 24 hrs`
+                    : ''
+                }
+              />
+              <CoinDetailsCard
+                title="Market Cap"
+                mainStat={`$${Number(selectedCoin.marketCap.toFixed(2)).toLocaleString()}` || 0}
+                percChange={
+                  selectedCoin.marketCapChange24h ? (
+                    `${selectedCoin.marketCapChange24h?.toFixed(2)}% in 24 hrs`
+                  ) : (
+                    <br />
+                  )
+                }
+              />
+              <CoinDetailsCard
+                title="Volume (24h)"
+                mainStat={`${selectedCoin.volume.toLocaleString()}` || 0}
+                percChange={<br />}
+              />
 
-            <CoinDetailsCard
-              title="Circulating Supply"
-              mainStat={`${Number(selectedCoin.totalSupply.toFixed(0)).toLocaleString()}` || 0}
-              percChange={<br />}
-            />
+              <CoinDetailsCard
+                title="Circulating Supply"
+                mainStat={`${Number(selectedCoin.totalSupply.toFixed(0)).toLocaleString()}` || 0}
+                percChange={<br />}
+              />
+            </Box>
           </Box>
         </Box>
       </>
