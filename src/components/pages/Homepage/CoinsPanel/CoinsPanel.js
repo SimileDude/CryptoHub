@@ -19,7 +19,8 @@ const CoinsPanel = () => {
         flexGrow: 1,
         height: '100vh',
         flexDirection: 'column',
-        overflow: 'scroll'
+        overflow: 'scroll',
+        mt: '70px'
       }}>
       <CoinTabs />
       <CoinSearch onSearch={handleSearch} />

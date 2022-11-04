@@ -1,9 +1,14 @@
-import { Grid } from '@mui/material'
+import { useTheme } from '@emotion/react'
+import { Grid, useMediaQuery } from '@mui/material'
 import React from 'react'
 import CoinDetails from './CoinDetails/CoinDetails'
 import CoinsPanel from './CoinsPanel/CoinsPanel'
 
 function Homepage() {
+  //Method provided by mui
+  const theme = useTheme()
+  const showCoinDetails = useMediaQuery(theme.breakpoints.up('md'))
+
   return (
     <Grid
       container
@@ -11,15 +16,17 @@ function Homepage() {
       sx={{
         display: 'flex',
         flexDirection: 'row',
-        padding: 0,
-        height: 'calc(100vh - 50px)'
+        flexWrap: 'nowrap',
+        padding: 0
       }}>
-      <Grid item xs={12} sm={12} md={5} lg={5} xl={4}>
+      <Grid item xs={12} sm={12} md={6} lg={5} xl={4}>
         <CoinsPanel />
       </Grid>
-      <Grid item xs={0} sm={0} md={7} lg={7} xl={8}>
-        <CoinDetails />
-      </Grid>
+      {showCoinDetails && (
+        <Grid item lg={7}>
+          <CoinDetails />
+        </Grid>
+      )}
     </Grid>
   )
 }
