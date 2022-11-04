@@ -1,12 +1,15 @@
-import { Box, Card, CardMedia, Checkbox, Typography } from '@mui/material'
-import React from 'react'
-
+import { Box, Button, Card, CardMedia, Checkbox, Typography, useMediaQuery } from '@mui/material'
+import React, { useState } from 'react'
+import Popup from 'reactjs-popup'
 import StarIcon from '@mui/icons-material/Star'
+import CancelIcon from '@mui/icons-material/Cancel'
 import StarOutlineIcon from '@mui/icons-material/StarOutline'
 import { CoinState } from '../../../../ContextAPI/CoinContext'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp'
 import { WatchedState } from '../../../../ContextAPI/WatchedContext'
+import CoinDetails from '../CoinDetails/CoinDetails'
+import { useTheme } from '@emotion/react'
 
 const CoinItem = ({
   id,
@@ -28,6 +31,13 @@ const CoinItem = ({
   const { numWatchedCoinsGroup, filterByWatchedGroup } = WatchedState() //Using Context API
   const [, setNumWatchedCoins] = numWatchedCoinsGroup //Using Context API
 
+  const [open, setOpen] = useState(false)
+  const closeModal = () => setOpen(false)
+
+  //Method provided by mui
+  const theme = useTheme()
+  const showPopup = useMediaQuery(theme.breakpoints.down('md'))
+
   const handleCardClick = (e) => {
     setSelectedCoin({
       id,
@@ -42,6 +52,7 @@ const CoinItem = ({
       totalSupply,
       isWatched
     })
+    showPopup && setOpen((o) => !o)
   }
 
   let coin = {}
@@ -143,7 +154,6 @@ const CoinItem = ({
               width: '30%',
               pr: 1,
               minWidth: 80,
-
               textAlign: 'right'
             }}>
             <Box component={'span'} sx={{ pr: 1 }}>
@@ -175,6 +185,39 @@ const CoinItem = ({
           </Box>
         </Box>
       </Card>
+      {
+        <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+          <Box
+            sx={{
+              height: '75px'
+            }}></Box>
+          <Box
+            sx={{
+              p: 4,
+              height: '80vh',
+              minHeight: '400px',
+              background:
+                'radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 60%, rgb(228,236,230,1) 95%)',
+              boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+              overflowY: 'scroll'
+            }}>
+            <Button
+              sx={{
+                color: 'black',
+                position: 'absolute',
+                top: '90px',
+                right: 10,
+                fontSize: '35px'
+              }}
+              onClick={closeModal}>
+              <CancelIcon fontSize="large" />
+            </Button>
+            <Box sx={{ mt: '-100px' }}>
+              <CoinDetails />
+            </Box>
+          </Box>
+        </Popup>
+      }
     </>
   )
 }

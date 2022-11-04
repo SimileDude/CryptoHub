@@ -27,7 +27,9 @@ const MainNavigation = () => {
   }
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#45735E' }}>
+    <AppBar
+      position="fixed"
+      sx={{ backgroundColor: '#45735E', z: 10, overflow: 'hidden', width: '100%' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Mobile Version */}
