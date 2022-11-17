@@ -14,6 +14,8 @@ I wrote all the code for this crypto web app using the following tools:
 -	Chart.js API for the chart feature
 
 ## Video
+Note: video is showing some distortion on some screens (does not happen in the app).
+
 https://user-images.githubusercontent.com/22677312/202503927-8fa3f6bd-5eb9-4aed-a9e3-472369316645.mp4
 
 ## Features:
