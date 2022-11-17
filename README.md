@@ -6,12 +6,12 @@ Hi there, I’m Ash, a passionate frontend developer with a love of coding as we
 Aside from some freelance work, I’m currently seeking a full-time role.  Do contact me if you’d like to talk: ashkherad@gmail.com.
 
 ## Tools
-I wrote all the code for this crypto web app using the following tools:
+I wrote all the code for this crypto web app. Some notable tools are:
 
--	ReactJS (v.18) frontend Javascript framework using hooks (useContext, useEffect, etc), custom hooks, react-router and more
--	Material UI (v.5) as a UI framework
+-	ReactJS (v18.2.0) frontend Javascript framework using hooks (useContext, useEffect, etc), custom hooks, react-router and more
+-	Material UI (v5.8.7) as a UI framework
 -	CoinGecko API to fetch crypto data
--	Chart.js API for the chart feature
+-	Chart.js (v3.9.1) API for the chart feature
 
 ## Video
 Note: video is showing some distortion on some screens (does not happen in the app).
