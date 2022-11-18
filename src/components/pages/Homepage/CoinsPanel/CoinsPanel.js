@@ -16,11 +16,11 @@ const CoinsPanel = () => {
       sx={{
         backgroundColor: '#F7F7F7',
         display: 'flex',
-        flexGrow: 1,
+        flexGrow: 3,
         height: '100vh',
         flexDirection: 'column',
         overflow: 'scroll',
-        mt: '70px'
+        mt: '64px'
       }}>
       <CoinTabs />
       <CoinSearch onSearch={handleSearch} />

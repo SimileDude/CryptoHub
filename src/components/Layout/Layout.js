@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 
 function Layout(props) {
   return (
-    <Box>
+    <Box sx={{ display: 'flex' }}>
       <MainNavigation />
       <main>{props.children}</main>
     </Box>
