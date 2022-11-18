@@ -15,10 +15,10 @@ I wrote all the code for this crypto web app. Some notable tools are:
 
 ## Video
 DESKTOP (LARGE SCREEN) VERSION:
-https://user-images.githubusercontent.com/22677312/202771837-0493ff05-4076-443b-bd7a-18d485b9dbce.mp4
+https://user-images.githubusercontent.com/22677312/202772459-a5c348bf-82f4-4f87-b01f-2b5c742846ab.mp4
 
 MOBILE (SMALLER SCREEN) VERSION:
-https://user-images.githubusercontent.com/22677312/202771863-dbec9aad-65e4-4667-8e18-2c22a73daf04.mp4
+https://user-images.githubusercontent.com/22677312/202772576-25ba74f5-a277-4006-b786-b4d9342cc6b2.mp4
 
 ## Features:
 -	Charts all cryptocurrency prices with several time frame options (24 hours, 30 days, 3 months, and 1 year)
