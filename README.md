@@ -14,9 +14,11 @@ I wrote all the code for this crypto web app. Some notable tools are:
 -	Chart.js (v3.9.1) API for the chart feature
 
 ## Video
-Note: video is showing some distortion on some screens (does not happen in the app).
+DESKTOP (LARGE SCREEN) VERSION:
+https://user-images.githubusercontent.com/22677312/202771837-0493ff05-4076-443b-bd7a-18d485b9dbce.mp4
 
-https://user-images.githubusercontent.com/22677312/202503927-8fa3f6bd-5eb9-4aed-a9e3-472369316645.mp4
+MOBILE (SMALLER SCREEN) VERSION:
+https://user-images.githubusercontent.com/22677312/202771863-dbec9aad-65e4-4667-8e18-2c22a73daf04.mp4
 
 ## Features:
 -	Charts all cryptocurrency prices with several time frame options (24 hours, 30 days, 3 months, and 1 year)
