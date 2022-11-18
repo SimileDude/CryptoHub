@@ -1,4 +1,5 @@
-import { Box, Button, Typography } from '@mui/material'
+import { useTheme } from '@emotion/react'
+import { Box, Button, Typography, useMediaQuery, theme } from '@mui/material'
 import React, { useState } from 'react'
 import { CoinState } from '../../../../ContextAPI/CoinContext'
 import CoinDetailsCard from '../../../Layout/CoinDetailsCard'
@@ -13,8 +14,15 @@ const CoinDetails = () => {
     return (
       <>
         <Box
-          sx={{ display: 'flex', width: '100%', flexDirection: 'column', m: 0, p: 0, mt: '64px' }}>
-          <Box component="h1" sx={{ fontWeight: '300', flex: 2, my: 3 }}>
+          sx={{
+            display: 'flex',
+            width: '100%',
+            flexDirection: 'column',
+            m: 0,
+            p: 0,
+            mt: '64px'
+          }}>
+          <Box component="h1" sx={{ fontWeight: '300', flex: 1, my: 3 }}>
             {selectedCoin?.name}
           </Box>
 

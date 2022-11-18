@@ -34,7 +34,7 @@ const CoinItem = ({
   const [open, setOpen] = useState(false)
   const closeModal = () => setOpen(false)
 
-  //Method provided by mui
+  //Method provided by mui, used for pop up on smaller devices
   const theme = useTheme()
   const showPopup = useMediaQuery(theme.breakpoints.down('md'))
 
@@ -189,12 +189,9 @@ const CoinItem = ({
         <Popup open={open} closeOnDocumentClick onClose={closeModal}>
           <Box
             sx={{
-              height: '75px'
-            }}></Box>
-          <Box
-            sx={{
               p: 4,
               height: '80vh',
+              mt: '75px',
               minHeight: '400px',
               background:
                 'radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 60%, rgb(228,236,230,1) 95%)',
