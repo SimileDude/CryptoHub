@@ -3,7 +3,7 @@
 ## About Me
 Hi there, I’m Ash, a passionate frontend developer with a love of coding as well as UI/UX design.  
 
-Aside from some freelance work, I’m currently seeking a full-time role.  Do contact me if you’d like to talk: ashkherad@gmail.com.
+Aside from some freelance work, I’m currently seeking a full-time role.  Do contact me if you’d like to chat: ashkherad@gmail.com.
 
 ## Summary
 CryptoHub is a cryptocurrency web app that allows you to fetch coin data (name, price, trading volume, etc), search, chart trading data, create a watchlist, and perform (simple) trades.  
