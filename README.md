@@ -15,7 +15,7 @@ DESKTOP VERSION:
 
 MOBILE VERSION:
 
-![Mobile-CryptoHub.gif](https://s10.gifyu.com/images/Mobile-CryptoHub.gif)
+[![Mobile-CryptoHub-resize.gif](https://s2.gifyu.com/images/Mobile-CryptoHub-resize.gif)](https://gifyu.com/image/SIpHc)
 
 ## Tools
 I wrote all the code for this crypto web app. Some notable tools are:
