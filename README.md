@@ -22,6 +22,7 @@ DESKTOP (LARGE SCREEN) VERSION:
 ![Desktop-CryptoHub.gif](https://s10.gifyu.com/images/Desktop-CryptoHub.gif)
 
 MOBILE (SMALLER SCREEN) VERSION:
+
 ![Mobile-CryptoHub.gif](https://s10.gifyu.com/images/Mobile-CryptoHub.gif)
 
 ## Features:
