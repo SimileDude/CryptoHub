@@ -18,7 +18,7 @@ I wrote all the code for this crypto web app. Some notable tools are:
 
 ## Video
 DESKTOP (LARGE SCREEN) VERSION:
-https://gifyu.com/image/SIMrE
+![Desktop-CryptoHub.gif](https://s10.gifyu.com/images/Desktop-CryptoHub.gif)
 
 MOBILE (SMALLER SCREEN) VERSION:
 https://gifyu.com/image/SIMrh
