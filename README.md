@@ -18,10 +18,11 @@ I wrote all the code for this crypto web app. Some notable tools are:
 
 ## Video
 DESKTOP (LARGE SCREEN) VERSION:
+
 ![Desktop-CryptoHub.gif](https://s10.gifyu.com/images/Desktop-CryptoHub.gif)
 
 MOBILE (SMALLER SCREEN) VERSION:
-https://gifyu.com/image/SIMrh
+![Mobile-CryptoHub.gif](https://s10.gifyu.com/images/Mobile-CryptoHub.gif)
 
 ## Features:
 -	Charts all cryptocurrency prices with several time frame options (24 hours, 30 days, 3 months, and 1 year)
