@@ -8,6 +8,15 @@ Aside from some freelance work, I’m currently seeking a full-time role.  Do co
 ## Summary
 CryptoHub is a cryptocurrency web app that allows you to fetch coin data, search coins, chart trading data, create a watchlist, and perform (simple) trades.  
 
+## Video
+DESKTOP VERSION:
+
+![Desktop-CryptoHub.gif](https://s10.gifyu.com/images/Desktop-CryptoHub.gif)
+
+MOBILE VERSION:
+
+![Mobile-CryptoHub.gif](https://s10.gifyu.com/images/Mobile-CryptoHub.gif)
+
 ## Tools
 I wrote all the code for this crypto web app. Some notable tools are:
 
@@ -15,15 +24,6 @@ I wrote all the code for this crypto web app. Some notable tools are:
 -	Material UI (v5.8.7) as a UI framework
 -	CoinGecko API to fetch crypto data
 -	Chart.js (v3.9.1) API for the chart feature
-
-## Video
-DESKTOP (LARGE SCREEN) VERSION:
-
-![Desktop-CryptoHub.gif](https://s10.gifyu.com/images/Desktop-CryptoHub.gif)
-
-MOBILE (SMALLER SCREEN) VERSION:
-
-![Mobile-CryptoHub.gif](https://s10.gifyu.com/images/Mobile-CryptoHub.gif)
 
 ## Features:
 -	Charts all cryptocurrency prices with several time frame options (24 hours, 30 days, 3 months, and 1 year)
