@@ -1,7 +1,7 @@
 # WELCOME TO CRYPTOHUB
 
 ## About Me
-Hi there, I’m Ash, a passionate software developer, welcome to my demo project.  
+Hi there, I’m Ash, a passionate software developer, and welcome to my demo project.  
 
 Aside from some freelance work, I’m currently seeking a full-time role.  Do contact me if you’d like to chat: ashkherad@gmail.com.
 
